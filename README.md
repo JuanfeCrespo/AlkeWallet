@@ -4,7 +4,7 @@ La plataforma cuenta con un sistema de acceso seguro que incluye validación de 
 
 Cada operación queda registrada de manera automática en un historial que permite visualizar tanto ingresos como egresos, con la opción de eliminar registros cuando sea necesario. A nivel tecnológico, el proyecto está desarrollado con HTML5 y CSS3, utilizando un tema oscuro personalizado junto a Bootstrap 5 para el diseño. La lógica está implementada en JavaScript moderno y jQuery para la manipulación del DOM, mientras que la persistencia de datos se gestiona mediante LocalStorage para mantener la información entre sesiones.
 
-Para comenzar a utilizar la aplicación basta con abrir el archivo index.html en un navegador. El acceso inicial se realiza con el usuario alke@wallet.com
+Para comenzar a utilizar la aplicación basta con abrir el archivo index.html en un navegador. El acceso inicial se realiza con el usuario user@alke.com
  y la clave 1234. Como detalle técnico, el sistema incorpora un saldo inicial por defecto de diez millones de pesos, pensado para facilitar las pruebas y la exploración de las funcionalidades desde la primera carga.
 
 Nota Técnica
