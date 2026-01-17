@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <title>AlkeWallet - Enviar Dinero</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="bootstrap/css/styles.css">
+</head>
+
+<body class="bg-dark">
+
+  <div class="container mt-5" style="max-width: 420px;">
+    <div class="card-premium text-center">
+      <div class="card-premium text-center animate__animated animate__fadeInUp"></div>
+      <div class="mb-3">
+        <div class="bg-primary bg-opacity-10 rounded-circle d-inline-flex align-items-center justify-content-center"
+          style="width: 80px; height: 80px;">
+          <i class="bi bi-send-fill text-primary display-5"></i>
+        </div>
+      </div>
+
+      <h3 class="fw-bold text-white">Enviar Dinero</h3>
+      <p class="text-muted small">Transfiere saldo de forma segura</p>
+
+      <form id="form-enviar" class="mt-4">
+        <div class="text-start mb-3">
+          <label class="form-label text-muted small fw-bold">DESTINATARIO</label>
+          <div class="input-group">
+            <input type="text" id="nombre-receptor" class="form-control border-end-0 rounded-start-pill"
+              placeholder="Nombre o seleccionar..." required>
+            <button class="btn btn-outline-primary border-start-0 rounded-end-pill px-3" type="button"
+              data-bs-toggle="modal" data-bs-target="#modalContactos">
+              <i class="bi bi-person-lines-fill"></i>
+            </button>
+          </div>
+        </div>
+
+        <div class="text-start mb-4">
+          <label class="form-label text-muted small fw-bold">MONTO A ENVIAR</label>
+          <div class="input-group">
+            <span class="input-group-text bg-transparent border-end-0 rounded-start-pill text-muted">$</span>
+            <input type="number" id="monto-enviar"
+              class="form-control border-start-0 rounded-end-pill fs-4 fw-bold text-white" placeholder="0" required
+              min="1">
+          </div>
+        </div>
+
+        <div class="d-grid gap-3">
+          <button type="submit" class="btn btn-primary btn-pill fs-5 py-3 shadow-lg">Confirmar Envío</button>
+          <a href="menu.html" class="text-decoration-none text-muted small fw-bold">Volver al Menú</a>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="modal fade" id="modalContactos" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered mx-auto" style="max-width: 380px;">
+      <div class="modal-content card-premium border-0">
+        <div class="modal-header border-0 pb-0">
+          <h5 class="modal-title fw-bold text-white">Mis Contactos</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <div id="lista-contactos" class="list-group list-group-flush mb-4 overflow-auto" style="max-height: 250px;">
+          </div>
+
+          <label class="form-label text-muted small fw-bold">AGREGAR NUEVO</label>
+
+          <div class="input-group">
+            <input type="text" id="nuevo-contacto-nombre" class="form-control border-end-0 rounded-start-pill"
+              placeholder="Nombre completo">
+            <button id="btn-agregar-contacto" class="btn btn-success rounded-end-pill px-3" type="button">
+              <i class="bi bi-plus-lg"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast-container position-fixed bottom-0 end-0 p-3">
+    <div id="liveToast" class="toast align-items-center text-white border-0 shadow-lg" role="alert"
+      aria-live="assertive" aria-atomic="true">
+      <div class="d-flex">
+        <div class="toast-body">
+          <i class="bi bi-info-circle me-2"></i>
+          <span id="toast-mensaje"></span>
+        </div>
+        <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"></button>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="bootstrap/js/send.js"></script>
+</body>
+
+</html>
